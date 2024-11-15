@@ -6,6 +6,6 @@ import authenticate from "../middleware/authenticate.js";
 const profileRoute = express.Router();
 
 profileRoute.get("/profile", authenticate, getProfile);
-profileRoute.put("/profile", authenticate, updateProfile);
+profileRoute.patch("/profile", authenticate, updateProfile);
 
 export default profileRoute;

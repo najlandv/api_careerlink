@@ -58,10 +58,6 @@ const updateProfile = async (req, res, next) => {
     pengguna.nama_pengguna = nama_pengguna;
     pengguna.email = email;
 
-    // Update password jika disertakan
-    if (password) {
-      pengguna.password = password; // Pastikan password di-encrypt saat update
-    }
 
     await pengguna.save();
 
