@@ -4,7 +4,7 @@ import authRoute from "./authRoute.js";
 import profileRoute from "./profileRoute.js";
 
 const route = express.Router();
-
+//membuat routes nya
 const routers = [authRoute, profileRoute];
 
 routers.forEach((router) => route.use("/api", router));
