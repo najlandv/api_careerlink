@@ -1,0 +1,28 @@
+ [LOGGER] 2024-11-08 06:32:13.489 PM error : uncaughtException: errorrHandling is not defined
+ReferenceError: errorrHandling is not defined
+    at file:///D:/Repo/template-api/src/routes/index.js:8:16
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:329:24)
+    at async loadESM (node:internal/process/esm_loader:34:7)
+    at async handleMainPromise (node:internal/modules/run_main:113:12)
+ [LOGGER] 2024-11-08 06:32:33.483 PM error : uncaughtException: errorrHandling is not defined
+ReferenceError: errorrHandling is not defined
+    at file:///D:/Repo/template-api/src/routes/index.js:8:16
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:329:24)
+    at async loadESM (node:internal/process/esm_loader:34:7)
+    at async handleMainPromise (node:internal/modules/run_main:113:12)
+ [LOGGER] 2024-11-08 06:32:34.363 PM error : uncaughtException: errorrHandling is not defined
+ReferenceError: errorrHandling is not defined
+    at file:///D:/Repo/template-api/src/routes/index.js:8:16
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:329:24)
+    at async loadESM (node:internal/process/esm_loader:34:7)
+    at async handleMainPromise (node:internal/modules/run_main:113:12)
+ [LOGGER] 2024-11-08 06:32:51.655 PM error : uncaughtException: errorrHandling is not defined
+ReferenceError: errorrHandling is not defined
+    at file:///D:/Repo/template-api/src/routes/index.js:8:16
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:329:24)
+    at async loadESM (node:internal/process/esm_loader:34:7)
+    at async handleMainPromise (node:internal/modules/run_main:113:12)
