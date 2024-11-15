@@ -1,9 +1,11 @@
 import express from "express";
 import errorrHandling from "../controller/errorrHandling.js";
+import authRoute from "./authRoute.js";
+import profileRoute from "./profileRoute.js";
 
 const route = express.Router();
 
-const routers = [];
+const routers = [authRoute, profileRoute];
 
 routers.forEach((router) => route.use("/api", router));
 
