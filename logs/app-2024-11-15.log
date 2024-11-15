@@ -1,0 +1,12 @@
+ [LOGGER] 2024-11-15 02:08:12.653 PM error : uncaughtException: ubahpwRoute is not defined
+ReferenceError: ubahpwRoute is not defined
+    at file:///D:/KULIAH%20NANA/PTB/backendfix/api_careerlink/src/routes/index.js:8:43
+    at ModuleJob.run (node:internal/modules/esm/module_job:268:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:543:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:116:5)
+ [LOGGER] 2024-11-15 02:08:52.490 PM error : uncaughtException: ubahpwRoute.pat is not a function
+TypeError: ubahpwRoute.pat is not a function
+    at file:///D:/KULIAH%20NANA/PTB/backendfix/api_careerlink/src/routes/ubahpwRoute.js:8:13
+    at ModuleJob.run (node:internal/modules/esm/module_job:268:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:543:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:116:5)
