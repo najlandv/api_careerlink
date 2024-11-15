@@ -2,10 +2,11 @@ import express from "express";
 import errorrHandling from "../controller/errorrHandling.js";
 import authRoute from "./authRoute.js";
 import profileRoute from "./profileRoute.js";
+import ubahpwRoute from "./ubahpwRoute.js";
 
 const route = express.Router();
 //membuat routes nya
-const routers = [authRoute, profileRoute];
+const routers = [authRoute, profileRoute, ubahpwRoute];
 
 routers.forEach((router) => route.use("/api", router));
 
