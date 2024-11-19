@@ -1,10 +1,10 @@
-import express from 'express';
-import 'dotenv/config';
-import appMiddleware from './middleware/index.js';
-import sequelize from './utils/db.js';
-import path from 'path';
-import { fileURLToPath } from 'url';
-import cors from 'cors';
+import express from "express";
+import "dotenv/config";
+import appMiddleware from "./middleware/index.js";
+import sequelize from "./utils/db.js";
+import path from "path";
+import { fileURLToPath } from "url";
+import cors from "cors";
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -15,18 +15,18 @@ const __dirname = path.dirname(__filename);
 
 // Log the static file directory
 console.log(
-    'Serving static files from: ',
-    path.join(__dirname, '..', 'assets'),
+  "Serving static files from: ",
+  path.join(__dirname, "..", "assets")
 );
-app.use(cors())
+app.use(cors());
 
 // Serve static files from 'assets' located outside 'src'
-app.use('/assets', express.static(path.join(__dirname, '..', 'assets')));
+app.use("/assets", express.static(path.join(__dirname, "..", "assets")));
 
 app.use(appMiddleware);
 
-await sequelize.sync({ alter: true });
+// await sequelize.sync({ alter: true });
 
 app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`Server running on http://localhost:${PORT}`);
 });
