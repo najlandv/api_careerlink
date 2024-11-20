@@ -1,0 +1,16 @@
+ [LOGGER] 2024-11-19 11:26:41.637 PM error : controller/profileController.js:updateProfile - Validation error
+ [LOGGER] 2024-11-19 11:27:07.408 PM error : controller/profileController.js:updateProfile - Validation error
+ [LOGGER] 2024-11-19 11:27:25.486 PM error : controller/profileController.js:updateProfile - Validation error
+ [LOGGER] 2024-11-19 11:28:08.973 PM error : controller/profileController.js:updateProfile - Validation error
+ [LOGGER] 2024-11-19 11:28:30.339 PM error : controller/profileController.js:updateProfile - Validation error
+ [LOGGER] 2024-11-19 11:28:55.853 PM error : uncaughtException: listen EADDRINUSE: address already in use :::3000
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1893:16)
+    at listenInCluster (node:net:1941:12)
+    at Server.listen (node:net:2029:7)
+    at Function.listen (C:\ptb\api_careerlink\node_modules\express\lib\application.js:635:24)
+    at file:///C:/ptb/api_careerlink/src/index.js:30:5
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)
+    at async loadESM (node:internal/process/esm_loader:28:7)
+    at async handleMainPromise (node:internal/modules/run_main:120:12)

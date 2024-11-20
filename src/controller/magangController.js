@@ -26,12 +26,12 @@ const createMagang = async (req, res, next) => {
     if (magang.message.length > 0) {
       return res.status(400).json({
         errors: magang.message,
-        message: "Gagal menambah data magang",
+        message: "Gagal menambahkan data  magang karena kesalahan validasi",
       });
     }
 
     if (!magang.data.tanggal_posting) {
-      magang.data.tanggal_posting = new Date(); // Mengisi tanggal saat ini
+      magang.data.tanggal_posting = new Date(); 
     }
 
     console.log(userId);
@@ -59,7 +59,7 @@ const createMagang = async (req, res, next) => {
     } else {
       await t.commit();
       res.status(201).json({
-        message: "Sukses menambahkan data magang",
+        message: "Data magang berhasil ditambahkan",
         data: result,
       });
     }
@@ -124,7 +124,7 @@ const getMyPosts = async (req, res, next) => {
     });
 
     res.status(200).json({
-      message: "Data magang postingan saya berhasil diambil",
+      message: "Data magang (mypost) berhasil diambil",
       data: magangList,
     });
   } catch (error) {
@@ -142,7 +142,8 @@ const getMagangById = async (req, res, next) => {
 
     if (!magang) {
       return res.status(404).json({
-        message: "Data magang tidak ditemukan",
+        errors: ["Data magang tidak ditemukan."],
+        message: "Gagal mengambil data magang",
       });
     }
 
@@ -170,13 +171,15 @@ const updateMagang = async (req, res, next) => {
 
     if (!existingMagang) {
       return res.status(404).json({
-        message: "Data magang tidak ditemukan",
+        errors: ["Data magang tidak ditemukan"],
+        message: "Gagal mengupdate data magang",
       });
     }
 
     if (existingMagang.id_pengguna !== req.user.id_pengguna) {
       return res.status(403).json({
-        message: "Anda tidak memiliki izin untuk mengupdate data magang ini",
+        errors: ["Anda tidak memiliki izin untuk mengupdate data magang ini"],
+        message: "Gagal mengupdate data",
       });
     }
 
@@ -219,13 +222,13 @@ const updateMagang = async (req, res, next) => {
     if (result[0] === 0) {
       await t.rollback();
       return res.status(400).json({
+        errors: ["Gagal mengupdate data magang"],
         message: "Gagal mengupdate data magang",
       });
     }
 
     await t.commit();
     res.status(200).json({
-      errors: [],
       message: "Berhasil mengupdate data magang",
       data: magang.data,
     });
@@ -250,14 +253,16 @@ const deleteMagang = async (req, res, next) => {
   
     if (!existingMagang) {
       return res.status(404).json({
-        message: "Gagal, data magang tidak ditemukan",
+        errors: ["Data magang tidak ditemukan."],
+        message: "Gagal menghapus data magang.",
       });
     }
 
   
     if (existingMagang.id_pengguna !== req.user.id_pengguna) {
       return res.status(403).json({
-        message: "Anda tidak memiliki izin untuk menghapus data magang ini",
+        errors: ["Anda tidak memiliki izin untuk menghapus data magang ini."],
+        message: "Gagal menghapus data, tidak memiliki izin",
       });
     }
 

@@ -1,11 +1,13 @@
 // controller/profileController.js
 import Pengguna from "../models/Pengguna.js";
+import { Op } from 'sequelize';
+
 
 const getProfile = async (req, res, next) => {
   try {
     const userId = req.user.id_pengguna;
     
-    // Log untuk melihat ID pengguna dari token
+    
     console.log('Mencari pengguna dengan ID:', userId);
 
     const pengguna = await Pengguna.findByPk(userId, {
@@ -28,12 +30,12 @@ const getProfile = async (req, res, next) => {
   }
 };
 
+
 const updateProfile = async (req, res, next) => {
   try {
     const userId = req.user.id_pengguna;
 
-    // Ambil data yang ingin diperbarui dari body request
-    const { nama_lengkap, nama_pengguna, email, password } = req.body;
+    const { nama_lengkap, nama_pengguna, email } = req.body;
 
     // Validasi input
     if (!nama_lengkap || !nama_pengguna || !email) {
@@ -48,7 +50,35 @@ const updateProfile = async (req, res, next) => {
 
     if (!pengguna) {
       return res.status(404).json({
-        errors: ["User not found"],
+        errors: ["Pengguna tidak ditemukan"],
+        message: "Profile Update Failed",
+      });
+    }
+
+    const existingUsername = await Pengguna.findOne({
+      where: {
+        nama_pengguna,
+        id_pengguna: { [Op.ne]: userId } 
+      }
+    });
+
+    if (existingUsername) {
+      return res.status(400).json({
+        errors: ["Gagal, nama pengguna sudah digunakan"],
+        message: "Profile Update Failed",
+      });
+    }
+
+    const existingEmail = await Pengguna.findOne({
+      where: {
+        email,
+        id_pengguna: { [Op.ne]: userId } 
+      }
+    });
+
+    if (existingEmail) {
+      return res.status(400).json({
+        errors: ["Gagal, Email sudah digunakan"],
         message: "Profile Update Failed",
       });
     }
@@ -57,7 +87,6 @@ const updateProfile = async (req, res, next) => {
     pengguna.nama_lengkap = nama_lengkap;
     pengguna.nama_pengguna = nama_pengguna;
     pengguna.email = email;
-
 
     await pengguna.save();
 

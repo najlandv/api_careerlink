@@ -1,3 +1,4 @@
+<<<<<<< HEAD
  [LOGGER] 2024-11-15 02:40:37.064 PM error : uncaughtException: (no error message)
 SequelizeConnectionRefusedError
     at ConnectionManager.connect (C:\ptb\api_careerlink\node_modules\sequelize\lib\dialects\mysql\connection-manager.js:92:17)
@@ -131,3 +132,17 @@ ReferenceError: maga is not defined
     at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)
     at async loadESM (node:internal/process/esm_loader:28:7)
     at async handleMainPromise (node:internal/modules/run_main:120:12)
+=======
+ [LOGGER] 2024-11-15 02:08:12.653 PM error : uncaughtException: ubahpwRoute is not defined
+ReferenceError: ubahpwRoute is not defined
+    at file:///D:/KULIAH%20NANA/PTB/backendfix/api_careerlink/src/routes/index.js:8:43
+    at ModuleJob.run (node:internal/modules/esm/module_job:268:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:543:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:116:5)
+ [LOGGER] 2024-11-15 02:08:52.490 PM error : uncaughtException: ubahpwRoute.pat is not a function
+TypeError: ubahpwRoute.pat is not a function
+    at file:///D:/KULIAH%20NANA/PTB/backendfix/api_careerlink/src/routes/ubahpwRoute.js:8:13
+    at ModuleJob.run (node:internal/modules/esm/module_job:268:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:543:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:116:5)
+>>>>>>> 77b947919ef1a37e5e82a1f9fba3da17ba34af04
