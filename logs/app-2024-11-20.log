@@ -27,3 +27,52 @@ This file is being treated as an ES module because it has a '.js' file extension
     at async handleMainPromise (node:internal/modules/run_main:120:12)
  [LOGGER] 2024-11-20 10:49:04.459 AM error : controller/magangController.js:deleteMagang - Operation timeout
  [LOGGER] 2024-11-20 10:54:07.342 AM error : controller/magangController.js:updateMagang - Cannot set properties of undefined (setting 'gambar_magang')
+ [LOGGER] 2024-11-20 02:02:00.079 PM error : uncaughtException: Upload is not defined
+ReferenceError: Upload is not defined
+    at file:///C:/Users/Lenovo/Downloads/template-api-apii/api_careerlink/src/routes/lokerRoute.js:33:3
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)
+    at async loadESM (node:internal/process/esm_loader:28:7)
+    at async handleMainPromise (node:internal/modules/run_main:120:12)
+ [LOGGER] 2024-11-20 02:02:08.859 PM error : uncaughtException: magangUpload is not defined
+ReferenceError: magangUpload is not defined
+    at file:///C:/Users/Lenovo/Downloads/template-api-apii/api_careerlink/src/routes/lokerRoute.js:33:3
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)
+    at async loadESM (node:internal/process/esm_loader:28:7)
+    at async handleMainPromise (node:internal/modules/run_main:120:12)
+ [LOGGER] 2024-11-20 02:08:20.718 PM error : controller/lokerController.js:updateLoker - Operation timeout
+ [LOGGER] 2024-11-20 02:10:15.926 PM error : controller/lokerController.js:updateLoker - Operation timeout
+ [LOGGER] 2024-11-20 02:16:12.187 PM error : controller/lokerController.js:updateLoker - Operation timeout
+ [LOGGER] 2024-11-20 02:33:33.654 PM error : uncaughtException: Upload is not defined
+ReferenceError: Upload is not defined
+    at file:///C:/Users/Lenovo/Downloads/template-api-apii/api_careerlink/src/routes/lokerRoute.js:33:3
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)
+    at async loadESM (node:internal/process/esm_loader:28:7)
+    at async handleMainPromise (node:internal/modules/run_main:120:12)
+ [LOGGER] 2024-11-20 02:48:59.405 PM error : uncaughtException: magangRoute is not defined
+ReferenceError: magangRoute is not defined
+    at file:///C:/Users/Lenovo/Downloads/template-api-apii/api_careerlink/src/routes/index.js:10:56
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)
+    at async loadESM (node:internal/process/esm_loader:28:7)
+    at async handleMainPromise (node:internal/modules/run_main:120:12)
+ [LOGGER] 2024-11-20 02:49:16.066 PM error : uncaughtException: magangRoute is not defined
+ReferenceError: magangRoute is not defined
+    at file:///C:/Users/Lenovo/Downloads/template-api-apii/api_careerlink/src/routes/index.js:10:56
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)
+    at async loadESM (node:internal/process/esm_loader:28:7)
+    at async handleMainPromise (node:internal/modules/run_main:120:12)
+ [LOGGER] 2024-11-20 02:59:02.428 PM error : controller/lokerController.js:updateLoker - Cannot set properties of undefined (setting 'gambar_loker')
+ [LOGGER] 2024-11-20 03:02:30.780 PM error : controller/lokerController.js:updateLoker - Cannot set properties of undefined (setting 'gambar_loker')
+ [LOGGER] 2024-11-20 03:02:32.598 PM error : controller/lokerController.js:updateLoker - Cannot set properties of undefined (setting 'gambar_loker')
+ [LOGGER] 2024-11-20 03:03:13.582 PM error : controller/lokerController.js:updateLoker - Cannot set properties of undefined (setting 'gambar_loker')
+ [LOGGER] 2024-11-20 03:03:43.144 PM error : controller/lokerController.js:updateLoker - Cannot set properties of undefined (setting 'gambar_loker')
+ [LOGGER] 2024-11-20 03:04:27.665 PM error : controller/lokerController.js:updateLoker - Cannot set properties of undefined (setting 'gambar_loker')
+ [LOGGER] 2024-11-20 03:04:29.429 PM error : controller/lokerController.js:updateLoker - Cannot set properties of undefined (setting 'gambar_loker')
+ [LOGGER] 2024-11-20 03:05:02.281 PM error : controller/lokerController.js:updateLoker - Cannot set properties of undefined (setting 'gambar_loker')
+ [LOGGER] 2024-11-20 03:05:20.988 PM error : controller/lokerController.js:updateLoker - TypeError: Cannot set properties of undefined (setting 'gambar_loker')
+ [LOGGER] 2024-11-20 03:06:11.442 PM error : controller/lokerController.js:updateLoker - Cannot set properties of undefined (setting 'gambar_loker')
+ [LOGGER] 2024-11-20 03:07:21.411 PM error : controller/lokerController.js:updateLoker - Cannot set properties of undefined (setting 'gambar_loker')
