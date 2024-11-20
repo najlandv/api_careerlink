@@ -3,11 +3,12 @@ import errorrHandling from "../controller/errorrHandling.js";
 import authRoute from "./authRoute.js";
 import profileRoute from "./profileRoute.js";
 import magangRoute from "./magangRoute.js"; 
+import lokerRoute from "./lokerRoute.js"; 
 import ubahpwRoute from "./ubahpwRoute.js"; 
 
 const route = express.Router();
 // Membuat routes-nya
-const routers = [authRoute, profileRoute, ubahpwRoute, magangRoute];
+const routers = [authRoute, profileRoute, ubahpwRoute, magangRoute, lokerRoute]
 
 routers.forEach((router) => route.use("/api", router));
 
