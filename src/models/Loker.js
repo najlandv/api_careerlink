@@ -52,7 +52,12 @@ const Loker = db.define("Loker", {
 
 },  {tableName: "loker",
     underscored: true,
+<<<<<<< HEAD
     timestamps: true,}
+=======
+    timestamps: true,
+    }
+>>>>>>> cb354f8b04fd1a418036a7f52130603d1c5aba44
 );
 
 
