@@ -36,6 +36,25 @@ const lokerStorage = multer.diskStorage({
   },
 });
 
+// Konfigurasi penyimpanan untuk sertifikasi
+const sertifikasiStorage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    const dir = "assets/images/sertifikasi/";
+
+    // Cek apakah direktori sudah ada, jika belum, buat direktori
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true });
+    }
+
+    cb(null, dir);
+  },
+  filename: (req, file, cb) => {
+    // Nama file menggunakan timestamp dan ekstensi file asli
+    cb(null, Date.now() + path.extname(file.originalname));
+  },
+});
+
+
 // Middleware upload untuk magang
 const magangUpload = multer({
   storage: magangStorage,
@@ -62,4 +81,18 @@ const lokerUpload = multer({
   },
 });
 
-export { magangUpload, lokerUpload };
+// Middleware upload untuk sertifikasi
+const sertifikasiUpload = multer({
+  storage: sertifikasiStorage, // Gunakan sertifikasiStorage yang sudah didefinisikan sebelumnya
+  limits: { fileSize: 1024 * 1024 * 5 }, // Batasi ukuran file menjadi 5MB
+  fileFilter: (req, file, cb) => {
+    if (file.mimetype.startsWith("image/")) {
+      cb(null, true); // Jika file adalah gambar, izinkan
+    } else {
+      cb(new Error("Only images are allowed"), false); // Jika bukan gambar, tolak
+    }
+  },
+});
+
+
+export { magangUpload, lokerUpload , sertifikasiUpload };
