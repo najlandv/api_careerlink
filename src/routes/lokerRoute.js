@@ -29,11 +29,7 @@ lokerRoute.patch(
   updateLoker
 );
 
-lokerRoute.delete(
-  "/lokerupload/:id", 
-  authenticate,
-  deleteLoker 
-);
+lokerRoute.delete("/lokerupload/:id", authenticate, deleteLoker);
 
 lokerRoute.get("/loker/:id", getLokerById);
 

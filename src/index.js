@@ -25,7 +25,7 @@ app.use("/assets", express.static(path.join(__dirname, "..", "assets")));
 
 app.use(appMiddleware);
 
-// await sequelize.sync({ alter: true });
+await sequelize.sync({ alter: true });
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);

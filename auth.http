@@ -1,0 +1,141 @@
+### Register
+POST localhost:3000/api/register
+Accept: application/json
+Content-Type: application/json
+
+{
+  "email": "najla11@mail.com",
+  "password": "adakami",
+  "nama_lengkap": "Najla",
+  "nama_pengguna": "najla12",
+  "confirmPassword": "adakami"
+}
+
+###
+
+### Login
+POST https://n6j4w26m-3000.asse.devtunnels.ms/api/login
+Accept: application/json
+Content-Type: application/json
+
+{
+  "email": "najla@mail.com",
+  "password": "adakami"
+}
+
+###
+
+### Ubah password
+PATCH https://n6j4w26m-3000.asse.devtunnels.ms/api/ubah-password
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF9wZW5nZ3VuYSI6MSwiZW1haWwiOiJuYWpsYUBtYWlsLmNvbSIsIm5hbWFfbGVuZ2thcCI6Ik5hamxhIiwiaWF0IjoxNzMzNjYyOTM4fQ.U_wLKm1THgS8GBC7YsdLZWPIqUlWOCMRUJsvjfe6BuM
+
+{
+  "password_lama": "adakami",
+  "password_baru": "adakami123",
+  "konfirmasi_password": "adakami123"
+}
+
+###
+
+
+### Create Loker
+POST https://n6j4w26m-3000.asse.devtunnels.ms/api/lokerupload
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF9wZW5nZ3VuYSI6MSwiZW1haWwiOiJuYWpsYUBtYWlsLmNvbSIsIm5hbWFfbGVuZ2thcCI6Ik5hamxhIiwiaWF0IjoxNzMzNjYyOTM4fQ.U_wLKm1THgS8GBC7YsdLZWPIqUlWOCMRUJsvjfe6BuM
+
+{
+  "perusahaan": "Perusahaan 8",
+  "judul_loker": "Lowongan Kerja",
+  "alamat": "Padang",
+  "posisi_loker": "Pasar",
+  "kualifikasi": "S1",
+  "jenis_loker": "Umum",
+  "deskripsi_loker": "Deskripsi",
+  "kontak": "088725317"
+}
+
+###
+
+### Get Loker
+
+GET https://n6j4w26m-3000.asse.devtunnels.ms/api/loker
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF9wZW5nZ3VuYSI6MSwiZW1haWwiOiJuYWpsYUBtYWlsLmNvbSIsIm5hbWFfbGVuZ2thcCI6Ik5hamxhIiwiaWF0IjoxNzMzNjYyOTM4fQ.U_wLKm1THgS8GBC7YsdLZWPIqUlWOCMRUJsvjfe6BuM
+
+###
+
+### Get Loker By Id
+
+GET https://n6j4w26m-3000.asse.devtunnels.ms/api/loker/4
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF9wZW5nZ3VuYSI6MSwiZW1haWwiOiJuYWpsYUBtYWlsLmNvbSIsIm5hbWFfbGVuZ2thcCI6Ik5hamxhIiwiaWF0IjoxNzMzNjYyOTM4fQ.U_wLKm1THgS8GBC7YsdLZWPIqUlWOCMRUJsvjfe6BuM
+
+###
+
+### Create Magang
+POST https://n6j4w26m-3000.asse.devtunnels.ms/api/magangupload
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF9wZW5nZ3VuYSI6MSwiZW1haWwiOiJuYWpsYUBtYWlsLmNvbSIsIm5hbWFfbGVuZ2thcCI6Ik5hamxhIiwiaWF0IjoxNzMzNjYyOTM4fQ.U_wLKm1THgS8GBC7YsdLZWPIqUlWOCMRUJsvjfe6BuM
+
+{
+  "perusahaan": "Perusahaan 2",
+  "judul_magang": "MSIB",
+  "alamat": "Pasar",
+  "posisi_magang": "Backend Developer",
+  "kualifikasi": "S1",
+  "jenis_magang": "Tertutup",
+  "durasi_magang": "2 Bulan",
+  "deskripsi_magang": "Magang yaa",
+  "kontak": "05548844651"
+}
+
+###
+
+### Get Magang
+
+GET https://n6j4w26m-3000.asse.devtunnels.ms/api/magang/myposts
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF9wZW5nZ3VuYSI6MSwiZW1haWwiOiJuYWpsYUBtYWlsLmNvbSIsIm5hbWFfbGVuZ2thcCI6Ik5hamxhIiwiaWF0IjoxNzMzNjYyOTM4fQ.U_wLKm1THgS8GBC7YsdLZWPIqUlWOCMRUJsvjfe6BuM
+
+###
+
+### Create Sertifikasi
+POST https://n6j4w26m-3000.asse.devtunnels.ms/api/sertifikasiupload
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF9wZW5nZ3VuYSI6MSwiZW1haWwiOiJuYWpsYUBtYWlsLmNvbSIsIm5hbWFfbGVuZ2thcCI6Ik5hamxhIiwiaWF0IjoxNzMzNjYyOTM4fQ.U_wLKm1THgS8GBC7YsdLZWPIqUlWOCMRUJsvjfe6BuM
+
+{
+  "instansi": "Perusahaan 2",
+  "judul_sertifikasi": "MSIB",
+  "deskripsi": "Pasar",
+  "tanggal_pelaksanaan": "22-11-2022",
+  "kontak": "021515454",
+  "harga": "20000"
+}
+
+
+### Get Sertifikasi
+
+GET https://n6j4w26m-3000.asse.devtunnels.ms/api/sertifikasi/myposts
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF9wZW5nZ3VuYSI6MSwiZW1haWwiOiJuYWpsYUBtYWlsLmNvbSIsIm5hbWFfbGVuZ2thcCI6Ik5hamxhIiwiaWF0IjoxNzMzNjYyOTM4fQ.U_wLKm1THgS8GBC7YsdLZWPIqUlWOCMRUJsvjfe6BuM
+
+###
+
+### Get User
+
+GET https://n6j4w26m-3000.asse.devtunnels.ms/api/profile
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF9wZW5nZ3VuYSI6MSwiZW1haWwiOiJuYWpsYUBtYWlsLmNvbSIsIm5hbWFfbGVuZ2thcCI6Ik5hamxhIiwiaWF0IjoxNzMzNjYyOTM4fQ.U_wLKm1THgS8GBC7YsdLZWPIqUlWOCMRUJsvjfe6BuM
+
+###

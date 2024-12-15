@@ -1,0 +1,9 @@
+ [LOGGER] 2024-12-12 09:55:33.213 PM error : controller/magangController.js:updateMagang - Cannot set properties of undefined (setting 'gambar_magang')
+ [LOGGER] 2024-12-12 09:55:40.268 PM error : controller/magangController.js:updateMagang - Cannot set properties of undefined (setting 'gambar_magang')
+ [LOGGER] 2024-12-12 09:55:48.530 PM error : controller/magangController.js:updateMagang - Cannot set properties of undefined (setting 'gambar_magang')
+ [LOGGER] 2024-12-12 10:33:44.655 PM error : controller/magangController.js:updateMagang - Cannot set properties of undefined (setting 'gambar_magang')
+ [LOGGER] 2024-12-12 10:35:13.099 PM error : controller/magangController.js:updateMagang - Cannot set properties of undefined (setting 'gambar_magang')
+ [LOGGER] 2024-12-12 10:36:20.751 PM error : controller/magangController.js:updateMagang - Cannot set properties of undefined (setting 'gambar_magang')
+ [LOGGER] 2024-12-12 10:36:24.065 PM error : controller/magangController.js:updateMagang - Cannot set properties of undefined (setting 'gambar_magang')
+ [LOGGER] 2024-12-12 11:32:24.253 PM error : Unexpected field
+ [LOGGER] 2024-12-12 11:37:08.681 PM error : Unexpected field

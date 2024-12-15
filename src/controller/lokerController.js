@@ -14,7 +14,7 @@ const createLoker = async (req, res, next) => {
     kualifikasi: "required",
     jenis_loker: "required",
     deskripsi_loker: "required",
-    kontak: "required"
+    kontak: "required",
   };
 
   const userId = req.user.id_pengguna;
@@ -30,7 +30,7 @@ const createLoker = async (req, res, next) => {
     }
 
     if (!loker.data.tanggal_posting) {
-      loker.data.tanggal_posting = new Date(); 
+      loker.data.tanggal_posting = new Date();
     }
 
     loker.data.id_pengguna = userId;
@@ -63,9 +63,7 @@ const createLoker = async (req, res, next) => {
   } catch (error) {
     await t.rollback();
     next(
-      new Error(
-        "controller/lokerController.js:createLoker - " + error.message
-      )
+      new Error("controller/lokerController.js:createLoker - " + error.message)
     );
   }
 };
@@ -95,9 +93,7 @@ const getAllLoker = async (req, res, next) => {
     });
   } catch (error) {
     next(
-      new Error(
-        "controller/lokerController.js:getAllLoker - " + error.message
-      )
+      new Error("controller/lokerController.js:getAllLoker - " + error.message)
     );
   }
 };
@@ -145,9 +141,7 @@ const getLokerById = async (req, res, next) => {
     });
   } catch (error) {
     next(
-      new Error(
-        "controller/lokerController.js:getLokerById - " + error.message
-      )
+      new Error("controller/lokerController.js:getLokerById - " + error.message)
     );
   }
 };
@@ -188,6 +182,8 @@ const updateLoker = async (req, res, next) => {
           }
         });
       }
+
+      loker.gambar_loker = imagePath;
     }
 
     const result = await Loker.update(
@@ -218,9 +214,7 @@ const updateLoker = async (req, res, next) => {
   } catch (error) {
     await t.rollback();
     next(
-      new Error(
-        "controller/lokerController.js:updateLoker - " + error.message
-      )
+      new Error("controller/lokerController.js:updateLoker - " + error.message)
     );
   }
 };
@@ -275,9 +269,7 @@ const deleteLoker = async (req, res, next) => {
   } catch (error) {
     await t.rollback();
     next(
-      new Error(
-        "controller/lokerController.js:deleteLoker - " + error.message
-      )
+      new Error("controller/lokerController.js:deleteLoker - " + error.message)
     );
   }
 };

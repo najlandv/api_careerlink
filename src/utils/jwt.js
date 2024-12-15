@@ -3,7 +3,7 @@ import "dotenv/config";
 
 const generateAccessToken = (user) => {
   return jsonWebToken.sign(
-    { id_pengguna: user.id_pengguna, email: user.email },
+    { id_pengguna: user.id_pengguna, email: user.email, nama_lengkap: user.nama_lengkap, nama_pengguna:user.nama_pengguna },
     process.env.JWT_SECERET
   );
 };

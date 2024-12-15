@@ -1,0 +1,16 @@
+ [LOGGER] 2024-12-07 05:11:25.844 PM error : uncaughtException: listen EADDRINUSE: address already in use :::3000
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1904:16)
+    at listenInCluster (node:net:1961:12)
+    at Server.listen (node:net:2063:7)
+    at Function.listen (D:\Repository\Joki\api_careerlink\node_modules\express\lib\application.js:635:24)
+    at file:///D:/Repository/Joki/api_careerlink/src/index.js:30:5
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ [LOGGER] 2024-12-07 05:43:01.110 PM error : uncaughtException: Deadlock found when trying to get lock; try restarting transaction
+Error
+    at Query.run (D:\Repository\Joki\api_careerlink\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\Repository\Joki\api_careerlink\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Magang.sync (D:\Repository\Joki\api_careerlink\node_modules\sequelize\lib\model.js:984:11)
+    at async Sequelize.sync (D:\Repository\Joki\api_careerlink\node_modules\sequelize\lib\sequelize.js:377:9)
+    at async file:///D:/Repository/Joki/api_careerlink/src/index.js:28:1

@@ -15,7 +15,7 @@ const createMagang = async (req, res, next) => {
     jenis_magang: "required",
     durasi_magang: "required",
     deskripsi_magang: "required",
-    kontak: "required"
+    kontak: "required",
   };
 
   const userId = req.user.id_pengguna;
@@ -31,7 +31,7 @@ const createMagang = async (req, res, next) => {
     }
 
     if (!magang.data.tanggal_posting) {
-      magang.data.tanggal_posting = new Date(); 
+      magang.data.tanggal_posting = new Date();
     }
 
     console.log(userId);
@@ -73,10 +73,8 @@ const createMagang = async (req, res, next) => {
   }
 };
 
-
 const getAllMagang = async (req, res, next) => {
   try {
-
     const magangs = await Magang.findAll({
       include: [
         {
@@ -84,7 +82,7 @@ const getAllMagang = async (req, res, next) => {
           attributes: ["id_pengguna", "nama_lengkap", "email"],
         },
       ],
-      order: [["tanggal_posting", "DESC"]], 
+      order: [["tanggal_posting", "DESC"]],
     });
 
     if (!magangs || magangs.length === 0) {
@@ -106,7 +104,6 @@ const getAllMagang = async (req, res, next) => {
     );
   }
 };
-
 
 const getMyPosts = async (req, res, next) => {
   try {
@@ -184,18 +181,15 @@ const updateMagang = async (req, res, next) => {
     }
 
     if (req.file) {
-      magang.data.gambar_magang = req.file.path; 
+      const imagePath = req.file.path;
 
-      
       if (
         existingMagang.gambar_magang &&
-        existingMagang.gambar_magang !== magang.data.gambar_magang
+        existingMagang.gambar_magang !== imagePath
       ) {
         fs.unlink(existingMagang.gambar_magang, (err) => {
           if (err) {
-            console.error(
-              `Gagal menghapus gambar lama : ${err.message}`
-            );
+            console.error(`Gagal menghapus gambar lama : ${err.message}`);
           } else {
             console.log(
               `Berhasil menghapus gambar lama : ${existingMagang.gambar_magang}`
@@ -203,6 +197,8 @@ const updateMagang = async (req, res, next) => {
           }
         });
       }
+
+      magang.gambar_magang = imagePath;
     }
 
     const result = await Magang.update(
@@ -247,10 +243,8 @@ const deleteMagang = async (req, res, next) => {
   const id = req.params.id;
 
   try {
-
     const existingMagang = await Magang.findByPk(id);
 
-  
     if (!existingMagang) {
       return res.status(404).json({
         errors: ["Data magang tidak ditemukan."],
@@ -258,7 +252,6 @@ const deleteMagang = async (req, res, next) => {
       });
     }
 
-  
     if (existingMagang.id_pengguna !== req.user.id_pengguna) {
       return res.status(403).json({
         errors: ["Anda tidak memiliki izin untuk menghapus data magang ini."],
@@ -305,7 +298,6 @@ const deleteMagang = async (req, res, next) => {
     );
   }
 };
-
 
 export {
   createMagang,
