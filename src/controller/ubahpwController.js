@@ -49,12 +49,8 @@ const gantiPassword = async (req, res, next) => {
       });
     }
 
-    // Hash password baru
-    const salt = await bcrypt.genSalt(10);
-    const hashedPass = await bcrypt.hash(password_baru, salt);
-
     // Update password di database
-    pengguna.password = hashedPass;
+    pengguna.password = password_baru;
     await pengguna.save({ transaction: t });
 
     await t.commit();
