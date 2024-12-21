@@ -135,7 +135,16 @@ const getMagangById = async (req, res, next) => {
   try {
     const id = req.params.id;
 
-    const magang = await Magang.findByPk(id);
+    const magang = await Magang.findByPk(id, {
+      include: [
+        {
+          model: Pengguna,
+          attributes: {
+            exclude: ["password"]
+          }
+        }
+      ]
+    });
 
     if (!magang) {
       return res.status(404).json({

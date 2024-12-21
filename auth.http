@@ -1,20 +1,20 @@
 ### Register
-POST localhost:3000/api/register
+POST https://apicareerlink-production.up.railway.app/api/register
 Accept: application/json
 Content-Type: application/json
 
 {
-  "email": "najla11@mail.com",
+  "email": "najla7@mail.com",
   "password": "adakami",
-  "nama_lengkap": "Najla",
-  "nama_pengguna": "najla12",
+  "nama_lengkap": "Najla123",
+  "nama_pengguna": "najla1234",
   "confirmPassword": "adakami"
 }
 
 ###
 
 ### Login
-POST https://n6j4w26m-3000.asse.devtunnels.ms/api/login
+POST https://apicareerlink-production.up.railway.app/api/login
 Accept: application/json
 Content-Type: application/json
 
@@ -26,15 +26,15 @@ Content-Type: application/json
 ###
 
 ### Ubah password
-PATCH https://n6j4w26m-3000.asse.devtunnels.ms/api/ubah-password
+PATCH https://apicareerlink-production.up.railway.app/api/ubah-password
 Accept: application/json
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF9wZW5nZ3VuYSI6MSwiZW1haWwiOiJuYWpsYUBtYWlsLmNvbSIsIm5hbWFfbGVuZ2thcCI6Ik5hamxhIiwiaWF0IjoxNzMzNjYyOTM4fQ.U_wLKm1THgS8GBC7YsdLZWPIqUlWOCMRUJsvjfe6BuM
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF9wZW5nZ3VuYSI6NCwiZW1haWwiOiJuYWpsYUBtYWlsLmNvbSIsIm5hbWFfbGVuZ2thcCI6Ik5hamxhMTIzIiwiaWF0IjoxNzM0NzczOTUyfQ.-NdTi2dpIro-h_4I_BRcUlGGTy7dUPmk8M0oDh_EjLA
 
 {
-  "password_lama": "adakami",
-  "password_baru": "adakami123",
-  "konfirmasi_password": "adakami123"
+  "password_lama": "adakami123",
+  "password_baru": "adakami1234",
+  "konfirmasi_password": "adakami1234"
 }
 
 ###
@@ -61,7 +61,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF9wZW5nZ3VuYSI6M
 
 ### Get Loker
 
-GET https://n6j4w26m-3000.asse.devtunnels.ms/api/loker
+GET https://apicareerlink-production.up.railway.app/api/loker
 Accept: application/json
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF9wZW5nZ3VuYSI6MSwiZW1haWwiOiJuYWpsYUBtYWlsLmNvbSIsIm5hbWFfbGVuZ2thcCI6Ik5hamxhIiwiaWF0IjoxNzMzNjYyOTM4fQ.U_wLKm1THgS8GBC7YsdLZWPIqUlWOCMRUJsvjfe6BuM

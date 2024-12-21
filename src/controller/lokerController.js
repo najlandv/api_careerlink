@@ -126,7 +126,16 @@ const getLokerById = async (req, res, next) => {
   try {
     const id = req.params.id;
 
-    const loker = await Loker.findByPk(id);
+    const loker = await Loker.findByPk(id, {
+      include: [
+        {
+          model: Pengguna,
+          attributes: {
+            exclude: ["password"]
+          }
+        }
+      ]
+    });
 
     if (!loker) {
       return res.status(404).json({

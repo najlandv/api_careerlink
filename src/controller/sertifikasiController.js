@@ -133,7 +133,16 @@ const getSertifikasiById = async (req, res, next) => {
   try {
     const id = req.params.id;
 
-    const sertifikasi = await Sertifikasi.findByPk(id);
+    const sertifikasi = await Sertifikasi.findByPk(id, {
+      include: [
+        {
+          model: Pengguna,
+          attributes: {
+            exclude: ["password"]
+          }
+        }
+      ]
+    });
 
     if (!sertifikasi) {
       return res.status(404).json({
