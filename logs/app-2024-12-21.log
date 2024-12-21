@@ -1,0 +1,41 @@
+ [LOGGER] 2024-12-21 05:47:05.203 PM error : uncaughtException: Too many keys specified; max 64 keys allowed
+Error
+    at Query.run (D:\Repository\Joki\api_careerlink\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\Repository\Joki\api_careerlink\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Pengguna.sync (D:\Repository\Joki\api_careerlink\node_modules\sequelize\lib\model.js:984:11)
+    at async Sequelize.sync (D:\Repository\Joki\api_careerlink\node_modules\sequelize\lib\sequelize.js:377:9)
+    at async file:///D:/Repository/Joki/api_careerlink/src/index.js:28:1
+ [LOGGER] 2024-12-21 05:47:47.054 PM error : uncaughtException: Too many keys specified; max 64 keys allowed
+Error
+    at Query.run (D:\Repository\Joki\api_careerlink\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\Repository\Joki\api_careerlink\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Pengguna.sync (D:\Repository\Joki\api_careerlink\node_modules\sequelize\lib\model.js:984:11)
+    at async Sequelize.sync (D:\Repository\Joki\api_careerlink\node_modules\sequelize\lib\sequelize.js:377:9)
+    at async file:///D:/Repository/Joki/api_careerlink/src/index.js:28:1
+ [LOGGER] 2024-12-21 05:48:39.891 PM error : uncaughtException: Too many keys specified; max 64 keys allowed
+Error
+    at Query.run (D:\Repository\Joki\api_careerlink\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\Repository\Joki\api_careerlink\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Pengguna.sync (D:\Repository\Joki\api_careerlink\node_modules\sequelize\lib\model.js:984:11)
+    at async Sequelize.sync (D:\Repository\Joki\api_careerlink\node_modules\sequelize\lib\sequelize.js:377:9)
+    at async file:///D:/Repository/Joki/api_careerlink/src/index.js:28:1
+ [LOGGER] 2024-12-21 05:49:03.773 PM error : uncaughtException: data and hash arguments required
+Error: data and hash arguments required
+    at compare (D:\Repository\Joki\api_careerlink\node_modules\bcrypt\bcrypt.js:208:17)
+    at D:\Repository\Joki\api_careerlink\node_modules\bcrypt\promises.js:29:12
+    at new Promise (<anonymous>)
+    at module.exports.promise (D:\Repository\Joki\api_careerlink\node_modules\bcrypt\promises.js:20:12)
+    at compare (D:\Repository\Joki\api_careerlink\node_modules\bcrypt\bcrypt.js:204:25)
+    at login (file:///D:/Repository/Joki/api_careerlink/src/controller/authController.js:98:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ [LOGGER] 2024-12-21 06:06:48.399 PM error : uncaughtException: Too many keys specified; max 64 keys allowed
+Error
+    at Query.run (D:\Repository\Joki\api_careerlink\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\Repository\Joki\api_careerlink\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Pengguna.sync (D:\Repository\Joki\api_careerlink\node_modules\sequelize\lib\model.js:984:11)
+    at async Sequelize.sync (D:\Repository\Joki\api_careerlink\node_modules\sequelize\lib\sequelize.js:377:9)
+    at async file:///D:/Repository/Joki/api_careerlink/src/index.js:28:1

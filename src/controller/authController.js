@@ -67,7 +67,7 @@ const register = async (req, res, next) => {
   }
 };
 
-const login = async (req, res, next) => {
+const   login = async (req, res, next) => {
   try {
     console.log("login");
     const valid = {
@@ -76,6 +76,7 @@ const login = async (req, res, next) => {
     };
     const user = await dataValid(valid, req.body);
     const data = user.data;
+    console.log(data)
     if (user.message.length > 0) {
       return res.status(400).json({
         errors: user.message,
@@ -87,29 +88,38 @@ const login = async (req, res, next) => {
         email: data.email,
       },
     });
-    if (!userExists || !compare(data.password, userExists.password)) {
+
+    const perbandingan = await compare(data.password, userExists.password)
+
+    console.log(perbandingan)
+
+    if (!userExists || perbandingan === false) {
       // Return a generic error message for both user not found and wrong password
       return res.status(400).json({
-        errors: ["Email or password is incorrect"],
-        message: "Login Failed",
+        errors: ['Username atau Password Salah'],
+        message: 'Login Gagal',
+        data: null,
       });
     }
 
+      const usr = {
+        id_pengguna: userExists.id_pengguna, // Pastikan ID pengguna ditambahkan
+        nama_lengkap: userExists.nama_lengkap,
+        email: userExists.email,
+      };
+
+      const token = generateAccessToken(usr); // Pastikan token berisi id_pengguna
+
+      return res.status(200).json({
+        errors: [],
+        message: "Login successful",
+        data: usr,
+        accessToken: token, // Token yang dikirimkan ke client
+      });
+
     // Sertakan id_pengguna dalam payload
-    const usr = {
-      id_pengguna: userExists.id_pengguna, // Pastikan ID pengguna ditambahkan
-      nama_lengkap: userExists.nama_lengkap,
-      email: userExists.email,
-    };
 
-    const token = generateAccessToken(usr); // Pastikan token berisi id_pengguna
 
-    return res.status(200).json({
-      errors: [],
-      message: "Login successful",
-      data: usr,
-      accessToken: token, // Token yang dikirimkan ke client
-    });
   } catch (error) {
     next(new Error("controllers/authController.js:login - " + error.message));
   }
